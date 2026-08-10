@@ -1,0 +1,15 @@
+{
+  "name": "unikar",
+  "version": "1.0.0",
+  "description": "UNIKAR — Street Culture Automotiva. Site institucional premium.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

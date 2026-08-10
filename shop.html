@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIKAR SHOP — Wear your machine.</title>
+  <meta name="description" content="Peças criadas para quem carrega a cultura automotiva além da garagem. Camisetas, quadros, canecas e kits UNIKAR." />
+  <meta property="og:title" content="UNIKAR SHOP — Wear your machine." />
+  <meta property="og:description" content="Peças criadas para quem carrega a cultura automotiva além da garagem." />
+  <meta property="og:image" content="assets/img/tee-back.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#08090A" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/shop.css" />
+</head>
+<body id="top" class="is-loaded">
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__bar">
+      <a href="index.html" class="logo" aria-label="UNIKAR — início">
+        <img src="assets/img/logo-sm.png" alt="UNIKAR" width="260" height="143" />
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" class="nav__link"><span>Home</span></a>
+        <a href="shop.html" class="nav__link is-active"><span>Shop</span></a>
+        <a href="index.html#quem-somos" class="nav__link"><span>Sobre</span></a>
+        <a href="index.html#como-funciona" class="nav__link"><span>Como funciona</span></a>
+      </nav>
+      <div class="header__right">
+        <a href="https://www.instagram.com/unikarlabz/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm header__cta">Enviar foto</a>
+        <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav" aria-label="Menu móvel">
+      <a href="index.html" class="menu__link"><span class="menu__num">01</span><span>Home</span></a>
+      <a href="shop.html" class="menu__link"><span class="menu__num">02</span><span>Shop</span></a>
+      <a href="index.html#quem-somos" class="menu__link"><span class="menu__num">03</span><span>Sobre</span></a>
+      <a href="index.html#como-funciona" class="menu__link"><span class="menu__num">04</span><span>Como funciona</span></a>
+      <a href="https://www.instagram.com/unikarlabz/" target="_blank" rel="noopener" class="menu__link menu__link--cta"><span class="menu__num">—</span><span>Enviar foto</span></a>
+    </nav>
+    <div class="menu__foot">
+      <span>@UNIKARLABZ</span>
+      <span>BUILT FOR YOU</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="shop-hero">
+      <div class="shop-hero__bg" aria-hidden="true">
+        <img src="assets/img/hero-kit.jpg" alt="" />
+      </div>
+      <div class="shop-hero__shade" aria-hidden="true"></div>
+
+      <div class="shop-hero__inner">
+        <div class="sec-head reveal" data-reveal="up" style="border-bottom:none;padding-bottom:0;margin-bottom:0">
+          <span class="sec-label"><b>—</b> / Coleção</span>
+          <span class="sec-label sec-label--r">Built for you</span>
+        </div>
+
+        <h1 class="shop-hero__title reveal" data-reveal="up" data-delay="80">
+          Unikar shop
+          <span class="shop-hero__kicker">Wear your machine.</span>
+        </h1>
+
+        <p class="shop-hero__lead reveal" data-reveal="up" data-delay="180">
+          Peças criadas para quem carrega a cultura automotiva além da garagem.
+        </p>
+
+        <div class="shop-hero__foot reveal" data-reveal="up" data-delay="260">
+          <a href="#collection" class="btn btn--solid" data-scroll>Explore collection</a>
+          <a href="#collection" class="scrollcue" data-scroll>
+            <span class="scrollcue__label">Deslizar</span>
+            <span class="scrollcue__line"><i></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FILTROS ============ -->
+    <div class="shop-bar" id="collection">
+      <div class="container shop-bar__inner">
+        <div class="shop-filters" id="shopFilters" role="group" aria-label="Filtrar por categoria"></div>
+        <span class="shop-count" id="shopCount"></span>
+      </div>
+    </div>
+
+    <!-- ============ VITRINE ============ -->
+    <section class="section" style="padding-block: clamp(40px,6vw,72px) var(--pad-y)">
+      <div class="container">
+        <div class="shop-grid" id="shopGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXA FINAL ============ -->
+    <section class="section" style="border-top:1px solid var(--line)">
+      <div class="container">
+        <div class="sec-head reveal" data-reveal="up">
+          <span class="sec-label"><b>—</b> / Sob medida</span>
+          <span class="sec-label sec-label--r">Uma peça, um carro</span>
+        </div>
+        <h2 class="h2 reveal" data-reveal="up" style="max-width:16ch;margin-bottom:clamp(28px,4vw,44px)">
+          Cada peça nasce de um carro.
+        </h2>
+        <p class="cta__text reveal" data-reveal="up" data-delay="120">
+          Você manda a foto. A gente cria a arte. A peça sai da produção com a cara da sua máquina.
+        </p>
+        <div class="cta__actions reveal" data-reveal="up" data-delay="240">
+          <a href="index.html#como-funciona" class="btn btn--ghost">Como funciona</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <a href="index.html" class="logo logo--footer" aria-label="UNIKAR">
+        <img src="assets/img/logo.png" alt="UNIKAR" width="720" height="395" />
+      </a>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#quem-somos">Sobre</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/unikarlabz/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 UNIKAR LABZ. Todos os direitos reservados.</span>
+      <span class="footer__motto">Feito pra quem trata a garagem como parte da família.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
