@@ -17,6 +17,124 @@
   color: var(--red);
 }
 
+/* ---------- Ícone do Instagram ---------- */
+.btn__ig {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.btn__ig .dot { fill: currentColor; stroke: none; }
+
+/* ============================================================
+   BOTÃO COM TRAÇO E LETRAS ESCALONADAS
+   A borda é desenhada em vermelho no hover, as letras rolam
+   uma a uma e as marcas laterais abrem devagar.
+   ============================================================ */
+.btn--fx {
+  position: relative;
+  overflow: visible;          /* .btn corta por padrão; o splash sai da caixa */
+  gap: 14px;
+  isolation: isolate;
+}
+
+.btn--fx:hover { border-color: var(--line-strong); }
+
+/* marcas que abrem dos lados */
+.btn__splash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100% + 110px);
+  height: calc(100% + 46px);
+  color: var(--silver);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.84);
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.btn--fx:hover .btn__splash,
+.btn--fx:focus-visible .btn__splash {
+  opacity: 0.42;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* traço que contorna o botão — pathLength=1 deixa o dash
+   independente do tamanho real do retângulo */
+.btn__outline {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.btn__outline rect {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.85s var(--ease-out);
+}
+
+.btn--fx:hover .btn__outline rect,
+.btn--fx:focus-visible .btn__outline rect { stroke-dashoffset: 0; }
+
+/* letras rolando: cada caractere carrega uma cópia de si
+   logo abaixo, revelada pelo overflow do contêiner */
+.btn__chars {
+  display: block;
+  height: 1.6em;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.btn__chars > span {
+  position: relative;
+  display: inline-block;
+  height: 1.6em;
+  transition: transform 0.55s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 24ms);
+}
+
+.btn__chars > span::after {
+  content: attr(data-ch);
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.btn--fx:hover .btn__chars > span,
+.btn--fx:focus-visible .btn__chars > span { transform: translateY(-100%); }
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.btn--fx:hover .btn__arrow,
+.btn--fx:focus-visible .btn__arrow { transform: translateX(5px); }
+
+/* O splash é enfeite de hover e é mais largo que o botão: em tela
+   estreita ele encostaria na borda, e em toque não há hover. */
+@media (hover: none), (max-width: 600px) {
+  .btn__splash { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn__splash { display: none; }
+  .btn__chars > span,
+  .btn__arrow,
+  .btn__outline rect { transition: none; }
+  .btn--fx:hover .btn__chars > span { transform: none; }
+}
+
 /* ============================================================
    HERO DA SHOP
    ============================================================ */

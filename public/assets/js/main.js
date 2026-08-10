@@ -124,6 +124,37 @@
   Array.prototype.forEach.call(doc.querySelectorAll("[data-split]"), splitWords);
 
   /* ----------------------------------------------------------
+     4b. Split de caracteres — usado no botão com letras
+         escalonadas. Espaços viram nó de texto para não
+         perderem a largura entre as palavras.
+     ---------------------------------------------------------- */
+  function splitChars(el) {
+    var text = el.textContent.trim();
+    var host = el.closest("a, button");
+    var i = 0;
+
+    el.textContent = "";
+    text.split("").forEach(function (ch) {
+      if (ch === " ") {
+        el.appendChild(doc.createTextNode(" "));
+        return;
+      }
+      var s = doc.createElement("span");
+      s.textContent = ch;
+      s.setAttribute("data-ch", ch);
+      s.style.setProperty("--i", i++);
+      el.appendChild(s);
+    });
+
+    /* o texto vira um monte de spans: some do leitor de tela e
+       devolve o rótulo inteiro no elemento clicável */
+    el.setAttribute("aria-hidden", "true");
+    if (host && !host.getAttribute("aria-label")) host.setAttribute("aria-label", text);
+  }
+
+  Array.prototype.forEach.call(doc.querySelectorAll("[data-chars]"), splitChars);
+
+  /* ----------------------------------------------------------
      5. Reveal observer
      ---------------------------------------------------------- */
   Array.prototype.forEach.call(
