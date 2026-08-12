@@ -55,7 +55,7 @@
       price: PRECOS.camiseta,
       images: ["assets/img/tee-back.jpg", "assets/img/tee-front.jpg"],
       sizes: true,
-      desc: "A arte do seu carro nas costas. Assinatura UNIKAR no peito. Preta, como tem que ser.",
+      desc: "A sua arte nas costas. Assinatura UNIKAR no peito. Preta, como tem que ser.",
       shopee: ""
     },
 
@@ -66,7 +66,7 @@
       cat: "accessories",
       price: PRECOS.quadro,
       images: ["assets/img/canvas.jpg"],
-      desc: "Sua máquina emoldurada. Pra parede da sala ou da garagem — você decide onde ela merece ficar.",
+      desc: "A sua arte emoldurada. Pra parede da sala, do quarto ou da garagem — você decide onde ela merece ficar.",
       shopee: ""
     },
     {
@@ -75,7 +75,7 @@
       cat: "accessories",
       price: PRECOS.caneca,
       images: ["assets/img/mug.jpg"],
-      desc: "Seu carro no primeiro café do dia.",
+      desc: "A sua arte no primeiro café do dia.",
       shopee: ""
     },
     {
@@ -97,7 +97,7 @@
       images: ["assets/img/kit-drive.jpg"],
       badge: "Avulso",
       sizes: true,
-      desc: "A entrada na coleção. Sua máquina virando camiseta e quadro, na mesma caixa.",
+      desc: "A entrada na coleção. Sua foto virando camiseta e quadro, na mesma caixa.",
       includes: [
         "Camiseta personalizada",
         "Quadro personalizado",
@@ -133,7 +133,7 @@
       images: ["assets/img/kit-garage-duo.jpg"],
       badge: "Avulso",
       sizes: true,
-      desc: "Duas camisetas, uma arte. Feito pra quem divide a garagem com alguém.",
+      desc: "Duas camisetas, uma arte. Feito pra dividir com quem você quer por perto.",
       includes: [
         "2 camisetas personalizadas",
         "Quadro personalizado",
@@ -152,7 +152,7 @@
       badge: "Assinatura",
       hot: true,
       sizes: true,
-      desc: "Todo mês uma arte nova do seu carro. A camiseta é sua. O quadro muda. O brinde ninguém sabe.",
+      desc: "Todo mês uma arte nova. A camiseta é sua. O quadro muda. O brinde ninguém sabe.",
       includes: [
         "Camiseta personalizada",
         "Quadro personalizado — arte nova todo mês",

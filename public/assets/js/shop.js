@@ -213,7 +213,7 @@
       p.note ? '      <p class="kit__note">' + esc(p.note) + "</p>" : "",
 
       '      <div class="pdp__meta">',
-      "        <div><h5>Personalização</h5><p>Você envia a foto do seu carro depois da compra. A arte é criada só pra você.</p></div>",
+      "        <div><h5>Personalização</h5><p>Você envia a foto depois da compra — carro, pet, família, o que for. A arte é criada só pra você.</p></div>",
       "        <div><h5>Produção</h5><p>Cada peça é produzida sob demanda, uma de cada vez.</p></div>",
       "      </div>",
       "    </div>",
