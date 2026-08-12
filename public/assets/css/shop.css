@@ -29,6 +29,14 @@
 
 .btn__ig .dot { fill: currentColor; stroke: none; }
 
+/* ---------- Ícone do WhatsApp ---------- */
+.btn__wpp {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
 /* ============================================================
    BOTÃO COM TRAÇO E LETRAS ESCALONADAS
    A borda é desenhada em vermelho no hover, as letras rolam

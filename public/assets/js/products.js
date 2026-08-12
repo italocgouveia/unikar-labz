@@ -10,9 +10,9 @@
      1. SHOPEE  —  COLE O LINK DA LOJA AQUI
      ----------------------------------------------------------
      Enquanto `store` estiver vazio, os botões de compra levam
-     para o Instagram (venda por direct). Assim que você colar o
-     endereço da loja, todos os botões viram "Comprar na Shopee"
-     automaticamente — em todas as páginas, sem mexer em mais nada.
+     para o WhatsApp. Assim que você colar o endereço da loja,
+     todos os botões viram "Comprar na Shopee" automaticamente
+     — em todas as páginas, sem mexer em mais nada.
 
      Ex.: store: "https://shopee.com.br/unikarlabz"
 
@@ -23,7 +23,15 @@
     store: ""
   };
 
+  var WHATSAPP_NUMERO = "5534984282923";
   var INSTAGRAM = "https://www.instagram.com/unikarlabz/";
+
+  function whatsappUrl(p) {
+    var msg = p
+      ? "Oi! Quero comprar: " + p.name
+      : "Oi! Quero fazer meu pedido UNIKAR.";
+    return "https://wa.me/" + WHATSAPP_NUMERO + "?text=" + encodeURIComponent(msg);
+  }
 
   /* ----------------------------------------------------------
      2. Preços dos avulsos
@@ -206,9 +214,9 @@
       return "";
     },
 
-    /** Link de compra do produto. Cai no Instagram enquanto a Shopee não estiver configurada. */
+    /** Link de compra do produto. Cai no WhatsApp enquanto a Shopee não estiver configurada. */
     buyUrl: function (p) {
-      return (p && p.shopee) || SHOPEE.store || INSTAGRAM;
+      return (p && p.shopee) || SHOPEE.store || whatsappUrl(p);
     },
 
     /** true quando o destino é mesmo a Shopee (muda o texto do botão). */

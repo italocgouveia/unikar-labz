@@ -200,14 +200,14 @@
 
       '      <div class="pdp__actions">',
       '        <a class="btn btn--buy" href="' + buy + '" target="_blank" rel="noopener">' +
-        (onShopee ? "Comprar na Shopee" : "Comprar pelo direct") + "</a>",
+        (onShopee ? "Comprar na Shopee" : "Comprar pelo WhatsApp") + "</a>",
       '        <a class="btn btn--ghost" href="shop.html">Continuar vendo</a>',
       "      </div>",
 
       '      <p class="pdp__ship">' +
         (onShopee
           ? "Pagamento e entrega são finalizados na Shopee."
-          : "A compra é fechada pelo direct do Instagram — a gente responde e combina tudo por lá.") +
+          : "A compra é fechada pelo WhatsApp — a gente responde e combina tudo por lá.") +
         "</p>",
 
       p.note ? '      <p class="kit__note">' + esc(p.note) + "</p>" : "",
