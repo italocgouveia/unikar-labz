@@ -155,6 +155,19 @@
   Array.prototype.forEach.call(doc.querySelectorAll("[data-chars]"), splitChars);
 
   /* ----------------------------------------------------------
+     4c. Vídeo em loop — não roda sozinho para quem pediu
+         menos movimento; nesse caso ganha controles.
+     ---------------------------------------------------------- */
+  if (reduceMotion) {
+    Array.prototype.forEach.call(doc.querySelectorAll("video[data-autoplay]"), function (v) {
+      v.removeAttribute("autoplay");
+      v.removeAttribute("loop");
+      v.setAttribute("controls", "");
+      v.pause();
+    });
+  }
+
+  /* ----------------------------------------------------------
      5. Reveal observer
      ---------------------------------------------------------- */
   Array.prototype.forEach.call(

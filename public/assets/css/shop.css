@@ -677,6 +677,177 @@
 }
 
 /* ============================================================
+   BLOCO DA MARCA — vídeo de bastidores + recado
+   ============================================================ */
+.brandnote {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: clamp(48px, 7vw, 88px);
+  border-top: 1px solid var(--line);
+}
+
+.brandnote__media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--coal);
+}
+
+.brandnote__media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+.brandnote__cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.brandnote__title {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 112, "wght" 640;
+  font-weight: 640;
+  font-size: clamp(1.7rem, 3.4vw, 2.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--offwhite);
+  margin: 18px 0 20px;
+}
+
+.brandnote__text {
+  color: var(--silver);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  max-width: 46ch;
+}
+
+/* ============================================================
+   EQUIPE
+   ============================================================ */
+.team__head {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.team__banner {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--coal);
+  margin-bottom: clamp(16px, 2vw, 26px);
+}
+
+.team__banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(14px, 1.8vw, 26px);
+}
+
+.team__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-strong);
+  background: rgba(229, 229, 229, 0.015);
+  padding: 0 0 clamp(20px, 2vw, 26px);
+  transition: border-color 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.team__card:hover {
+  border-color: rgba(229, 229, 229, 0.32);
+  transform: translateY(-4px);
+}
+
+.team__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--black);
+  margin-bottom: clamp(18px, 2vw, 24px);
+}
+
+.team__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out);
+}
+
+.team__card:hover .team__media img { transform: scale(1.05); }
+
+.team__name {
+  position: relative;
+  padding: 0 clamp(18px, 2vw, 24px) 12px;
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 112, "wght" 700;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--offwhite);
+}
+
+/* traço vermelho que cresce no hover */
+.team__name::after {
+  content: "";
+  position: absolute;
+  left: clamp(18px, 2vw, 24px);
+  bottom: 4px;
+  width: 22px;
+  height: 2px;
+  background: var(--red);
+  transform-origin: left;
+  transform: scaleX(0.55);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.team__card:hover .team__name::after { transform: scaleX(1.8); }
+
+.team__role {
+  padding: 6px clamp(18px, 2vw, 24px) 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 1024px) {
+  .team__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .brandnote { grid-template-columns: 1fr; }
+  .brandnote__media { max-width: 340px; }
+  .team__head { grid-template-columns: 1fr; align-items: start; }
+}
+
+@media (max-width: 520px) {
+  .team__grid { grid-template-columns: 1fr; }
+  .team__card { max-width: 380px; }
+}
+
+/* ============================================================
    RESPONSIVO
    ============================================================ */
 @media (max-width: 1024px) {
