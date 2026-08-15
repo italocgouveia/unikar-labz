@@ -63,7 +63,7 @@
       price: PRECOS.camiseta,
       images: ["assets/img/tee-back.jpg", "assets/img/tee-front.jpg"],
       sizes: true,
-      desc: "A sua arte nas costas. Assinatura UNIKAR no peito. Preta, como tem que ser.",
+      desc: "A sua arte nas costas. Assinatura UNIKAR no peito. Branca, como tem que ser.",
       shopee: ""
     },
 
